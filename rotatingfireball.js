@@ -23,6 +23,19 @@ function $(id) {
 	return document.getElementById(id);
 }
 
+function rotatingFireballGetFavicon() {
+	"use strict";
+	var app, a;
+
+	app = document.getElementsByTagName("link");
+	for (a = 0; a < app.length; a = a + 1) {
+		if (app[a].rel === "icon") { // :)
+			return app[a];
+		}
+	}
+	return null;
+}
+
 function rotatingFireballInit() {
 	"use strict";
 	var canvas, div, img;
@@ -75,7 +88,7 @@ function rotatingFireballDrawImage(img, x, y, width, height, rad) {
 	var ctx, icon, newIcon;
 
 	ctx = $('render').getContext('2d');
-	icon = $('favicon');
+	icon = rotatingFireballGetFavicon();
 	newIcon = icon.cloneNode(true);
 
 	ctx.clearRect(0, 0, 16, 16);

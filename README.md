@@ -10,9 +10,8 @@ so 90's: all you need is Javascript.
 There is a minified version of `rotatingfireball.js` for people so
 cheap on bandwith they can't distribute a 4K text file.
 
-To use just add `id="favicon"` to your favicon element and append
-`<script src="javascripts/rotatingfireball.min.js">` at the end of your
-page!
+To use just append `<script src="javascripts/rotatingfireball.min.js">`
+at the end of your page!
 
 You can see a live demo here: http://bouledefeu.github.io/rotatingfireball.js
 
@@ -23,6 +22,10 @@ All code is open source under ISC.
 
 Change log
 ----------
+
+0.2
+
+* Don't require the id="favicon" thing;
 
 0.1
 
